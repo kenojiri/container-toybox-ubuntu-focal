@@ -9,7 +9,7 @@
 - to get BASH shell prompt in `toybox` Pod
 
 ```
-$ kubectl run toybox -it --rm --image=harbor-repo.vmware.com/dockerhub-proxy-cache/ozzozz/toybox-ubuntu-focal --command -- bash --login
+$ kubectl run toybox -it --rm --image=ozzozz/toybox-ubuntu-focal --command -- bash --login
 ```
 
 ### Docker
