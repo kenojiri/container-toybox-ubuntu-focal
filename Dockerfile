@@ -6,6 +6,10 @@ RUN apt-get update &&\
       vim tmux tree pwgen direnv bash-completion \
       stress
 
+### yj
+RUN curl -L https://github.com/sclevine/yj/releases/download/$(curl -s https://api.github.com/repos/sclevine/yj/releases/latest | jq -r .tag_name)/yj-linux-amd64 -o /usr/local/bin/yj &&\
+    chmod +x /usr/local/bin/yj
+
 ### Minio CLI ###
 RUN curl -vL https://dl.minio.io/client/mc/release/linux-amd64/mc -o /usr/local/bin/mc &&\
     chmod +x /usr/local/bin/mc
